@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Product Management App (Using FakeStoreAPI & Async JavaScript)</title>
+     <style>
+         body { 
+            font-family: sans-serif;
+             margin: 20px;
+             background-color: aquamarine;
+             
+             }
+         .productlist{
+            display: flex;
+            flex-wrap:nowrap;
+            gap:20px;
+             }
+       .container-fluid{
+        display: flex;
+        flex-wrap: wrap;
+         gap:30px;
+         width: 100%;
+       }
+    
+       #newproductform{
+            /* display: block; */
+            margin:5px;
+            padding: 30px;
+        margin-top: 20px;
+        background-color: chocolate;
+        }  
+       .product-item{
+          
+            border:5px solid rgb(42, 165, 63);
+            padding: 20px;
+            width: 40%;
+            background-color:rgb(202, 168, 221);
+            text-align: center;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px;
+            display: block;
+
+            
+        }
+        .product-item h6,h5{
+           font-size: 15px;
+           font-family: sans-serif;
+           color: purple;
+           background-color: darkorange;
+           
+
+        }
+        h
+        .productlist,.product-item p{
+             color: black;
+            font-style: italic;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            width: 100%;
+            background-color: rgba(2, 192, 81, 0.788);
+        }
+        h2{
+            color: blue;
+            font-size: 15px;
+        }
+       @media screen and (min-width: 320px) and (max-width: 500px){
+          .product-item{
+            width: 100%;
+            display: block;
+
+          }
+
+       }
+        
+    </style>
+</head>
+
+
+<body clas="p-4">
+
+   <h1 style="background-color:yellow; color:crimson; font-size: 30px;">Assignment 9 - Product Management App (Using FakeStoreAPI & Async JavaScript)</h1>
+   <div class="container">
+    <h4>Add a new Product</h4>
+    <!-- search option -->
+    <input type="text" id="searchInput"  placeholder="Search products by title..." >
+    <button id="searchButton" onclick="searchProducts()"><a href="#productlist">Search</a></button>
+
+ <!-- add a new Product -->
+<form id="newproductform" class="mb-4">
+  <input type="text" id="productid">
+    <div class="mb-2">
+    <input type="text" id="newtitle" class="form-control" placeholder="product title" required></div>
+     <div class="mb-2">
+        <input type="number" id="newprice" class="form-control"  placeholder="product price"required></div>
+ <div class="mb-2">
+    <input type="text" id="newcategory" class="form-control" placeholder="product category"required></div>
+ <div class="mb-2">
+    <input type="text" id="newdescription" class="form-control" placeholder="product description"required></div>
+ <div class="mb-2">
+    <input type="image url" id="newimage" class="form-control" placeholder=" image url" required></div>
+
+<button type="submit"  class="btn btn-primary">save</button>
+ </form>
+   
+
+
+
+   <div  class="container-fluid" id="productlist"> <h1>loading products......</h1></div>
+    <!-- <ul id="produtlist" class="list-group"></ul> -->
+   </div>
+    <script src="script.js"></script>
+</body>
+</html>
